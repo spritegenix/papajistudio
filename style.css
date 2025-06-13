@@ -45,7 +45,8 @@ https://matchthemes.com
 	--body-line-height: 1.7;
 	--headings-font: Cormorant, serif;
 	--headings-color: #ffffff; 
-	--primary-color: #8bb8c1;
+	/* --primary-color: #8bb8c1; */
+	--primary-color: #ffffff;
 	--extra-color1: #acdae2;
 	--white-color: #ffffff;
 	--menu-normal-color: #ffffff;
@@ -778,7 +779,7 @@ a,
 .icon-bar1,
 .icon-bar2 {
 	width: 18px;
-	background: #ffffff;
+	background: #000000;
 }
 
 .icon-bar:before,
@@ -831,7 +832,7 @@ a,
 }
 
 .menu-mobile li a {
-	color: #fff;
+	color: #000000;
 	display: block;
 	line-height: 1.5;
 }
@@ -1187,25 +1188,25 @@ transition: all .3s cubic-bezier(.25,1,.35,1) 0s;
 
 .no-top-image .logo-txt a,
 .nav-fixed-top .logo-txt a {
-	color: #ffffff;
+	color: #000000;
 }
 
 .no-top-image .social-media li a,
 .social-dark li a,
 .nav-fixed-top .social-media li a{
-	color: #ffffff;
+	color: #000000;
 }
 
 .no-top-image .icon-bar,
 .nav-fixed-top .icon-bar{
-	background: #ffffff;
+	background: #000000;
 }
 
 .no-top-image .icon-bar:before,
 .no-top-image .icon-bar:after,
 .nav-fixed-top .icon-bar:before,
 .nav-fixed-top .icon-bar:after {
-	background: #ffffff;
+	background: #000000;
 }
 
 .no-top-image .menu-nav li a,
@@ -1378,8 +1379,8 @@ transform: translateY(-50%);
 	content:'';
 	width: 100%;
 	height: 100%;
-	background: #ffffff81;
-	opacity: 0.2;
+	background: #0000008d;
+	opacity: 0.8;
 	position: absolute;
 	top:0;
 	left: 0;
@@ -1410,7 +1411,7 @@ transform: translateY(-50%);
 .box-icon{
 	font-size: 48px;
 	margin-bottom: 16px;
-	color: #ffffff;
+	color: var(--body-background);
 	line-height: 1;
 }
 
@@ -1428,6 +1429,7 @@ transform: translateY(-50%);
 .box-title{
 	font-size: 1.5rem;
 	margin-bottom: 16px;
+	color: var(--body-background);
 }
 
 .icon-color{
@@ -1719,23 +1721,28 @@ aside p {
 .port-item-htext {
 	position: relative;
 	margin-bottom: 30px;
+	overflow: hidden;
 }
 
 .port-item-htext .port-img {
 	position: relative;
+	 transition: transform 0.3s ease;
 	overflow: hidden;
+}
+.port-item-htext .port-img:hover {
+	transform: scale(1.1);
 }
 
 .port-item-htext .port-img:after {
-	content: '';
+	/* content: '';
 	position: absolute;
 	left: 0;
 	top: 0;
 	width: 100%;
-	height: 100%;
-	background: #ffffff;
-	opacity: 0.2;
-	z-index: 2;
+	height: 100%; */
+	/* background: #ffffff; */
+	/* opacity: 0.2; */
+	/* z-index: 2; */
 }
 
 .port-item-htext .port-img:after,
@@ -2600,6 +2607,7 @@ padding: 0 10px;
 
 .box-title-3{
 	margin-bottom: 0;
+	color: var(--headings-color);
 }
 
 /** FAQ PAGE **/
@@ -3503,7 +3511,6 @@ aside table td,
 */
 
 footer {
-	margin-top: 108px;
 	padding: 0 0 54px 0;
 	background: var(--footer-background-color);
 }
@@ -3680,7 +3687,7 @@ text-transform: uppercase;
 .post-password-form input[type="submit"]{
 	font-size: 14px;
 	font-weight: 600;
-	color: #fff;
+	color: #000000;
 	background: #ffffff;
 	letter-spacing: 0.03em;
 	padding: 12px 24px;
@@ -3694,18 +3701,18 @@ text-transform: uppercase;
 .wpcf7-submit:hover,
 .page-links a:hover,
 .post-password-form input[type="submit"]:hover{
-	background: var(--primary-color);
+	background: var(--body-background);
 	color: #fff;
 }
 
 .white-btn{
 background: var(--primary-color);
-color: #fff;
+color: #000000;
 }
 
 .white-btn:hover{
-background: #fff;
-color: #ffffff;
+background: #000000;
+color: #fff;
 }
 
 
@@ -4763,7 +4770,7 @@ body.hidden-scroll {
 	}
 	
 	footer{
-		margin-top: 72px;
+		/* margin-top: 72px; */
 	}
 	
 	.footer-widgets{
@@ -5023,4 +5030,32 @@ body.hidden-scroll {
 		margin-left: 0;
 		margin-top: 8px;
 	}
+}
+
+
+
+.award-logo-box {
+  background-color: #fff; /* Light background for visibility */
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+
+.award-logo-box:hover {
+  border-color: #ffffff;
+  transform: scale(1.03);
+}
+
+.award-logo-box img {
+  max-height: 120px;
+  object-fit: contain;
+  width: auto;
+  height: auto;
+  filter: brightness(1.1);
+}
+.black{
+	color: #000000;
 }
