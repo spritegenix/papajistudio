@@ -36,14 +36,17 @@ https://matchthemes.com
 *
 * 
 */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 :root {  
-	--body-font: Open Sans, sans-serif;
+	--body-font: "Playfair Display", sans-serif;
+	/* --body-font: Open Sans, sans-serif; */
 	--body-color: #858585;
 	--body-background: #000000;   
 	--body-font-size: 16px;   
 	--body-line-height: 1.7;
-	--headings-font: Cormorant, serif;
+	--headings-font: "Playfair Display", serif;
+	/* --headings-font: Cormorant, serif; */
 	--headings-color: #ffffff; 
 	/* --primary-color: #8bb8c1; */
 	--primary-color: #ffffff;
