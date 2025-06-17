@@ -6118,3 +6118,6 @@ body.tt-boxed .tt-wrap .tt-row {
 		flex-direction: column-reverse !important;
 	}
 }
+.d-none{
+display: none;
+}

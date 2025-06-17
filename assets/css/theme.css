@@ -3229,12 +3229,12 @@ body.tt-boxed .tt-wrap .ttgr-height {
 
 /* With layout 3 */
 @media (min-width: 768px) {
-	.tt-grid.ttgr-layout-3.ttgr-shifted .tt-grid-item:nth-child(2) .ttgr-item-inner {
+	.tt-grid.ttgr-layout-3.ttgr-shifted .tt-grid-item:nth-of-type(2) .ttgr-item-inner {
 		margin-top: 13vw;
 	}
 }
 @media (min-width: 1200px) {
-	.tt-grid.ttgr-layout-3.ttgr-shifted .tt-grid-item:nth-child(2) .ttgr-item-inner {
+	.tt-grid.ttgr-layout-3.ttgr-shifted .tt-grid-item:nth-of-type(2) .ttgr-item-inner {
 		margin-top: 8vw;
 	}
 }

@@ -1,5 +1,5 @@
 /*
-Gleam Portfolio Photography HTML Template
+papaji Portfolio Photography HTML Template
 Version: 2.0.0
 Author: MatchThemes
 https://matchthemes.com
@@ -844,7 +844,8 @@ a,
 
 .menu-mobile li:hover>a,
 .menu-mobile li.current-menu-item>a {
-	color: var(--primary-color);
+	color: var(--body-background);
+	text-decoration: underline;
 }
 
 .menu-mobile>li.menu-item-has-children>a:after {
@@ -3363,7 +3364,7 @@ footer .instagram-pics li img {
 .tags-single-page a {
 	display: inline-block;
 	font-size: 13px !important;
-	color: #fff;
+	color: #000000;
 	background: #ffffff;
 	padding: 8px 16px;
 	text-align: center;
@@ -4436,6 +4437,8 @@ body.hidden-scroll {
 		width: 960px;
 		margin: 0 auto;
 	}*/
+
+	
 }
 
 @media (min-width: 1500px) {
@@ -5059,3 +5062,137 @@ body.hidden-scroll {
 .black{
 	color: #000000;
 }
+
+
+
+.wrapper {
+  height: 100vh;
+}
+
+.list {
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  display: flex;
+  position: relative;
+  padding: 0.2rem;
+}
+
+.item {
+  width: 100vw;
+  height: fit-content;
+  display: flex;
+  position: absolute;
+  inset: 0%;
+  box-shadow: rgb(149, 157, 165, 0.2) 0px 8px 24px;
+  overflow: hidden;
+}
+
+.item_number {
+  font-size: 1.5rem;
+  height: 3rem;
+  width: 3rem;
+  margin-bottom: 0.5rem;
+  border-radius: 50%;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  position: absolute;
+  top: 6rem;
+  left: 3rem;
+}
+
+.item_content {
+  background-color: #fff;
+  color: #292929;
+  flex-flow: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3rem;
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.item_media {
+  object-fit: cover;
+  width: 100%;
+  height: 70%;
+}
+
+.padding-global {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.padding-vertical {
+  padding: 2rem;
+}
+
+@media (max-width: 575.98px) {
+  .heading {
+    font-size: 2.5rem;
+  }
+
+  .item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .item_content,
+  .item_media {
+    height: 50vh;
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .item_number {
+    font-size: .5rem;
+    top: 1.5rem;
+  }
+}
+
+
+
+	.slider-img{
+		 position: relative;
+              width: 100%;
+              height: 100vh;
+              overflow: hidden;
+			  video {
+				  position: absolute;
+                top: 50%;
+                left: 50%;
+                min-width: 100%;
+                min-height: 100%;
+                transform: translate(-50%, -50%);
+                object-fit: cover;
+                z-index: -1;
+			  }
+	}
+
+
+	@media (max-width: 768px) {
+  .slider-img {
+    position: relative;
+    width: 100%;
+    height: 400px; /* or auto, or a specific value depending on your design */
+    overflow: hidden;
+  }
+
+  .slider-img video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    /* contain can leave gaps; use cover unless you want full video visibility */
+  }
+}
+
