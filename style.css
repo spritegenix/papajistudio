@@ -42,12 +42,12 @@ https://matchthemes.com
 	--body-font: "Playfair Display", sans-serif;
 	/* --body-font: Open Sans, sans-serif; */
 	--body-color: #858585;
-	--body-background: #000000;   
+	--body-background: #ffffff;   
 	--body-font-size: 16px;   
 	--body-line-height: 1.7;
 	--headings-font: "Playfair Display", serif;
 	/* --headings-font: Cormorant, serif; */
-	--headings-color: #ffffff; 
+	--headings-color: #000000; 
 	/* --primary-color: #8bb8c1; */
 	--primary-color: #ffffff;
 	--extra-color1: #acdae2;
@@ -1415,7 +1415,7 @@ transform: translateY(-50%);
 .box-icon{
 	font-size: 48px;
 	margin-bottom: 16px;
-	color: var(--body-background);
+	color: var(--headings-color);
 	line-height: 1;
 }
 
@@ -1433,7 +1433,7 @@ transform: translateY(-50%);
 .box-title{
 	font-size: 1.5rem;
 	margin-bottom: 16px;
-	color: var(--body-background);
+	color: var(--headings-color);
 }
 
 .icon-color{
@@ -2148,7 +2148,7 @@ aside p {
 }
 
 .port-caption-masonry h3 a{
-	color: #ffffff;
+	color: var(--headings-color);
 }
 
 .port-caption-masonry h3 a:hover,
@@ -2738,7 +2738,7 @@ font-size: 16px;}
 }
 
 .article-title a {
-	color: #ffffff;
+	color: var(--headings-color);
 	display: block;
 }
 

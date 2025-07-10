@@ -2,8 +2,8 @@
 * Template Helper CSS
 * 
 * Template:		Nui - Creative Portfolio Showcase HTML Website Template
-* Author:		Themetorium
-* URL:			https://themetorium.net/
+* Author:		Papaji Studio
+* URL:			https://Papaji Studio.net/
 *
 * Secondary Font: 'Syne', sans-serif;
 * Main color:  #b12c0d;
@@ -237,10 +237,11 @@ body:not(.is-mobile) .hide-to-mobile { display: none !important; }
 /* ------------------------------------------------------------- *
  * Font/text classes
 /* ------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 /* font alter */
 .font-alter { 
-	font-family: 'Syne', sans-serif !important;
+	font-family: "Playfair Display",  sans-serif !important;
 }
 
 /* font styles */
@@ -6120,4 +6121,8 @@ body.tt-boxed .tt-wrap .tt-row {
 }
 .d-none{
 display: none;
+}
+
+.textwidget p , .textwidget a{
+color: #858585;
 }

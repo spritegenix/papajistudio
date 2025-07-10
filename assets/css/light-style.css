@@ -2,8 +2,8 @@
 * Template Light Stylesheet
 * 
 * Template:		Nui - Creative Portfolio Showcase HTML Website Template
-* Author:		Themetorium
-* URL:			https://themetorium.net/
+* Author:		Papaji Studio
+* URL:			https://Papaji Studio.net/
 *
 -------------------------------------------------------------------- */
 
@@ -338,7 +338,7 @@ body:not(.tt-light-bg-on):not(.ph-bg-image-on) .ph-share .social-buttons > ul > 
 }
 body:not(.tt-light-bg-on):not(.ph-bg-image-on) .ph-caption-title-ghost {
 	color: var(--tt-ghost-color);
-	opacity: 1;
+	opacity: 0.3;
 }
 body:not(.tt-light-bg-on):not(.ph-bg-image-on) .tt-sd-arrow-inner,
 body:not(.tt-light-bg-on):not(.ph-bg-image-on) .tt-sd-arrow::before, 
