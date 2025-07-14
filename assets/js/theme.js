@@ -4088,9 +4088,9 @@
   // ==========================================================================
 
   // Display style switch button
-  $('#body-inner').prepend(
-    '<div class="tt-style-switch"><div class="tt-stsw-dark"><i class="far fa-moon"></i></div><div class="tt-stsw-light"><i class="fas fa-sun"></i></div></div>'
-  );
+  // $('#body-inner').prepend(
+  //   '<div class="tt-style-switch"><div class="tt-stsw-dark"><i class="far fa-moon"></i></div><div class="tt-stsw-light"><i class="fas fa-sun"></i></div></div>'
+  // );
 
   // Hide magic cursor on button hover
   if ($('body').hasClass('tt-smooth-scroll')) {

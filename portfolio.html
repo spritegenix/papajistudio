@@ -57,7 +57,7 @@
       type="text/css"
       media="all"
     />
-     <link
+    <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
       rel="stylesheet"
     />
@@ -99,6 +99,20 @@
     <!-- Template master CSS -->
     <link rel="stylesheet" href="assets/css/helper.css" />
     <link id="tt-themecss" rel="stylesheet" href="assets/css/theme.css" />
+    <link rel="stylesheet" href="portfolio.css" />
+    <script>
+      // Patch the portfolio card rendering to add SVG overlay inside .pgi-image-inner
+      document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.pgi-image-inner').forEach(function (inner) {
+          if (!inner.querySelector('.pgi-svg-overlay')) {
+            const svg = document.createElement('div');
+            svg.className = 'pgi-svg-overlay';
+            svg.innerHTML = `<svg width="100%" height="100%" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="80" cy="100" r="60" fill="#fff6fa" fill-opacity="0.25"/><circle cx="320" cy="60" r="40" fill="#ffe3f0" fill-opacity="0.18"/><ellipse cx="200" cy="320" rx="90" ry="40" fill="#f9e6ff" fill-opacity="0.18"/><circle cx="300" cy="300" r="30" fill="#f7d6e0" fill-opacity="0.13"/><ellipse cx="120" cy="260" rx="30" ry="18" fill="#fff" fill-opacity="0.10"/></svg>`;
+            inner.appendChild(svg);
+          }
+        });
+      });
+    </script>
   </head>
 
   <!-- ===========
@@ -165,7 +179,9 @@
                 <a href="index.html">Home</a>
               </li>
               <li class="menu-item"><a href="about.html">About Us</a></li>
-              <li class="menu-item  current-menu-item"><a href="portfolio.html">Portfolio</a></li>
+              <li class="menu-item current-menu-item">
+                <a href="portfolio.html">Portfolio</a>
+              </li>
               <!-- <li class="menu-item menu-item-has-children">
             <a href="#">Pages</a>
             <ul class="sub-menu">
@@ -465,9 +481,7 @@
               </div>
               <nav class="nav-holder nav-holder-1">
                 <ul class="menu-nav">
-                  <li
-                    class="menu-item menu-item-has-children "
-                  >
+                  <li class="menu-item menu-item-has-children">
                     <a href="index.html">Home</a>
                     <!-- <ul class="sub-menu">
 										<li class="menu-item"><a href="index.html">Home 1</a></li>
@@ -708,9 +722,8 @@
                   <li class="menu-item current-menu-item">
                     <a href="portfolio.html">Portfolio</a>
                   </li>
-                  <li class="menu-item ">
+                  <li class="menu-item">
                     <a href="blog.html">Blog</a>
-                    
                   </li>
 
                   <li class="menu-item">
@@ -746,11 +759,11 @@
                     ><i class="fab fa-facebook-f"></i
                   ></a>
                 </li>
-                 <li>
-              <a class="social-x" href="#" target="_blank">
-                <i class="fa-brands fa-x-twitter"></i>
-              </a>
-            </li>
+                <li>
+                  <a class="social-x" href="#" target="_blank">
+                    <i class="fa-brands fa-x-twitter"></i>
+                  </a>
+                </li>
                 <li>
                   <a class="social-instagram" href="#" target="_blank"
                     ><i class="fab fa-instagram"></i
@@ -783,7 +796,12 @@
           <div
             id="page-header"
             class="ph-cap-lg ph-ghost-scroll ph-image-cropped ph-image-cover-2 ph-content-parallax"
-            style="background-image: url(/images/portfolio/cover.webp); background-repeat: no-repeat; background-position: center; background-size: cover;"
+            style="
+              background-image: url(/images/portfolio/cover.webp);
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+            "
           >
             <div class="page-header-inner tt-wrap">
               <!-- Begin page header image 
@@ -800,8 +818,10 @@
 							Use class "max-width-*" to set caption max width if needed. For example "max-width-1000". More info about helper classes can be found in the file "helper.css".
 							-->
               <div class="ph-caption">
-                <div class="ph-caption-subtitle" >
-                  <div class="ph-appear">Capturing Stories, Preserving Moments</div>
+                <div class="ph-caption-subtitle">
+                  <div class="ph-appear">
+                    Capturing Stories, Preserving Moments
+                  </div>
                 </div>
                 <h1 class="ph-caption-title">
                   <div class="ph-appear">Moments</div>
@@ -941,91 +961,104 @@
 
                     <!-- Begin tt-Grid items wrap 
 										============================== -->
-                    <div class="tt-grid-items-wrap isotope-items-wrap portfolio-grid">
+                    <div
+                      class="tt-grid-items-wrap isotope-items-wrap portfolio-grid"
+                    >
+                      <script>
+                        const portfolioItems = [
+                          {
+                            slug: 'divy&mansi',
+                            mediaType: 'image',
+                            mediaSrc:
+                              'assets/img/portfolio/940/portfolio-1.webp',
+                            title: 'DIVY & MANSI',
+                            category: 'stories',
+                          },
+                          // {
+                          //   slug: "fashion-shoot",
+                          //   mediaType: "video",
+                          //   videoSources: [
+                          //     { src: "assets/vids/fashion-shoot.mp4", type: "video/mp4" },
+                          //     { src: "assets/vids/fashion-shoot.webm", type: "video/webm" }
+                          //   ],
+                          //   poster: "assets/vids/fashion-shoot.jpg",
+                          //   title: "Fashion Shoot",
+                          //   category: "people"
+                          // },
+                          {
+                            slug: 'akshay-gunjan',
+                            mediaType: 'image',
+                            mediaSrc:
+                              'assets/img/portfolio/940/portfolio-2.webp',
+                            title: 'Akshay & Gunjan',
+                            category: 'wedding',
+                          },
+                          {
+                            slug: 'hemal-shruti',
+                            mediaType: 'image',
+                            mediaSrc:
+                              'assets/img/portfolio/940/portfolio-3.webp',
+                            title: 'Hemal & Shruti',
+                            category: 'wedding',
+                          },
+                          {
+                            slug: 'kishan-jhanvi',
+                            mediaType: 'image',
+                            mediaSrc:
+                              'assets/img/portfolio/940/portfolio-4.webp',
+                            title: 'Kishan & Jhanvi',
+                            category: 'wedding',
+                          },
+                          {
+                            slug: 'nirav-purvakshi',
+                            mediaType: 'image',
+                            mediaSrc:
+                              'assets/img/portfolio/940/portfolio-5.webp',
+                            title: 'Nirav & Purvakshi',
+                            category: 'wedding',
+                          },
+                          {
+                            slug: 'rishil-juh',
+                            mediaType: 'image',
+                            mediaSrc:
+                              'assets/img/portfolio/940/portfolio-6.webp',
+                            title: 'Rishil & Juh',
+                            category: 'wedding',
+                          },
+                        ];
 
+                        const gridContainer =
+                          document.querySelector('.portfolio-grid');
 
-     <script>
-  const portfolioItems = [
-    {
-      slug: "divy&mansi",
-      mediaType: "image",
-      mediaSrc: "assets/img/portfolio/940/portfolio-1.webp",
-      title: "DIVY & MANSI",
-      category: "stories"
-    },
-    // {
-    //   slug: "fashion-shoot",
-    //   mediaType: "video",
-    //   videoSources: [
-    //     { src: "assets/vids/fashion-shoot.mp4", type: "video/mp4" },
-    //     { src: "assets/vids/fashion-shoot.webm", type: "video/webm" }
-    //   ],
-    //   poster: "assets/vids/fashion-shoot.jpg",
-    //   title: "Fashion Shoot",
-    //   category: "people"
-    // },
-    {
-      slug: "akshay-gunjan",
-      mediaType: "image",
-      mediaSrc: "assets/img/portfolio/940/portfolio-2.webp",
-      title: "Akshay & Gunjan",
-      category: "wedding"
-    },
-     {
-      slug: "hemal-shruti",
-      mediaType: "image",
-      mediaSrc: "assets/img/portfolio/940/portfolio-3.webp",
-      title: "Hemal & Shruti",
-      category: "wedding"
-    },
-    {
-      slug: "kishan-jhanvi",
-      mediaType: "image",
-      mediaSrc: "assets/img/portfolio/940/portfolio-4.webp",
-      title: "Kishan & Jhanvi",
-      category: "wedding"
-    },
-      {
-      slug: "nirav-purvakshi",
-      mediaType: "image",
-      mediaSrc: "assets/img/portfolio/940/portfolio-5.webp",
-      title: "Nirav & Purvakshi",
-      category: "wedding"
-    },
-      {
-      slug: "rishil-juh",
-      mediaType: "image",
-      mediaSrc: "assets/img/portfolio/940/portfolio-6.webp",
-      title: "Rishil & Juh",
-      category: "wedding"
-    }
-  ];
+                        portfolioItems.forEach((item) => {
+                          const div = document.createElement('div');
+                          div.className = `tt-grid-item isotope-item ${item.category}`;
 
-  const gridContainer = document.querySelector(".portfolio-grid");
-
-  portfolioItems.forEach(item => {
-    const div = document.createElement("div");
-    div.className = `tt-grid-item isotope-item ${item.category}`;
-
-    const mediaContent =
-      item.mediaType === "image"
-        ? `
+                          const mediaContent =
+                            item.mediaType === 'image'
+                              ? `
       <figure class="pgi-image ttgr-height">
         <img src="${item.mediaSrc}" alt="${item.title}" />
       </figure>`
-        : `
+                              : `
       <figure class="pgi-video-wrap ttgr-height">
-        <video class="pgi-video" loop muted preload="metadata" poster="${item.poster}">
+        <video class="pgi-video" loop muted preload="metadata" poster="${
+          item.poster
+        }">
           ${item.videoSources
-            .map(source => `<source src="${source.src}" type="${source.type}" />`)
-            .join("")}
+            .map(
+              (source) => `<source src="${source.src}" type="${source.type}" />`
+            )
+            .join('')}
         </video>
       </figure>`;
 
-    div.innerHTML = `
+                          div.innerHTML = `
       <div class="ttgr-item-inner">
         <div class="portfolio-grid-item">
-          <a href="${item.slug}.html" class="pgi-image-wrap" data-cursor="View<br>">
+          <a href="${
+            item.slug
+          }.html" class="pgi-image-wrap" data-cursor="View<br>">
             <div class="pgi-image-holder">
               <div class="pgi-image-inner anim-zoomin">
                 ${mediaContent}
@@ -1036,19 +1069,19 @@
             <div class="pgi-caption-inner">
               <h2 class="pgi-title">${item.title}</h2>
               <div class="pgi-categories-wrap">
-                <div class="pgi-category">${item.category.replace("-", " ")}</div>
+                <div class="pgi-category">${item.category.replace(
+                  '-',
+                  ' '
+                )}</div>
               </div>
             </div>
           </div>
         </div>
       </div>`;
 
-    gridContainer.appendChild(div);
-  });
-</script>
-
-
-                    
+                          gridContainer.appendChild(div);
+                        });
+                      </script>
                     </div>
                     <!-- End tt-Grid items wrap  -->
                   </div>
@@ -1092,7 +1125,7 @@
 								* Use class "tt-pn-center" to align page nav to center.
 								* Use class "tt-pn-stroke" to enable title stroke style.
 								-->
-                <div class="tt-page-nav tt-pn-stroke">
+                <div class="tt-page-nav tt-pn-stroke z-100">
                   <a
                     href="contact-us.html"
                     class="tt-pn-link anim-fadeinup"

@@ -41,7 +41,7 @@
       type="text/css"
       media="all"
     />
- <link
+    <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
       rel="stylesheet"
     />
@@ -124,6 +124,13 @@
         }
       }
     </script>
+    <style>
+      #viju-img {
+        z-index: 10;
+        position: relative;
+      }
+    </style>
+    <link rel="stylesheet" href="custom.css" />
   </head>
   <body class="home">
     <div class="menu-mask"></div>
@@ -134,10 +141,12 @@
           <span class="icon-bar1"></span> <span class="icon-bar2"></span>
         </div>
         <ul class="menu-mobile">
-          <li class="menu-item ">
+          <li class="menu-item">
             <a href="index.html">Home</a>
           </li>
-          <li class="menu-item current-menu-item"><a href="about.html">About Us</a></li>
+          <li class="menu-item current-menu-item">
+            <a href="about.html">About Us</a>
+          </li>
           <li class="menu-item"><a href="portfolio.html">Portfolio</a></li>
           <!-- <li class="menu-item menu-item-has-children">
             <a href="#">Pages</a>
@@ -428,7 +437,7 @@
           </div>
           <nav class="nav-holder nav-holder-1">
             <ul class="menu-nav">
-              <li class="menu-item menu-item-has-children ">
+              <li class="menu-item menu-item-has-children">
                 <a href="index.html">Home</a>
                 <!-- <ul class="sub-menu">
 										<li class="menu-item"><a href="index.html">Home 1</a></li>
@@ -669,9 +678,8 @@
               <li class="menu-item">
                 <a href="portfolio.html">Portfolio</a>
               </li>
-              <li class="menu-item ">
+              <li class="menu-item">
                 <a href="blog.html">Blog</a>
-               
               </li>
 
               <li class="menu-item">
@@ -707,7 +715,7 @@
                 ><i class="fab fa-facebook-f"></i
               ></a>
             </li>
-           <li>
+            <li>
               <a class="social-x" href="#" target="_blank">
                 <i class="fa-brands fa-x-twitter"></i>
               </a>
@@ -840,7 +848,7 @@
 
       <!-- /SECTION 2-->
       <!-- SECTION 3-->
-      <section class="section-holder section-about23 alignc">
+      <section class="section-holder section-about23 alignc bg-yellow">
         <div class="container">
           <div class="row">
             <div class="col-lg-4">
@@ -983,7 +991,7 @@
 
       <!-- /SECTION 5-->
       <!-- SECTION 6-->
-      <section class="home-section6">
+      <section class="home-section6 section-contact-cta">
         <div class="container">
           <div class="row align-items-center">
             <div class="col-lg-8">
@@ -1147,5 +1155,35 @@
     <!-- CONTAT FORM JS -->
     <script src="js/jquery.form.min.js"></script>
     <script src="js/contactform.js"></script>
+    <!-- GSAP for scroll-based animation -->
+    <script src="assets/vendor/gsap/gsap.min.js"></script>
+    <script src="assets/vendor/gsap/ScrollTrigger.min.js"></script>
+    <script>
+      // Ensure DOM is loaded
+      document.addEventListener('DOMContentLoaded', function () {
+        // Add an id to the image if not already present
+        var vijuImg = document.querySelector(
+          'img[src="images/about/viju.webp"]'
+        );
+        if (vijuImg && !vijuImg.id) {
+          vijuImg.id = 'viju-img';
+        }
+        // GSAP zoom-in on scroll
+        if (window.gsap && window.ScrollTrigger && vijuImg) {
+          gsap.registerPlugin(ScrollTrigger);
+          gsap.to('#viju-img', {
+            scale: 1.2,
+            duration: 1,
+            ease: 'power2.out',
+            scrollTrigger: {
+              trigger: '#viju-img',
+              start: 'top center', // when image top hits center of viewport
+              end: 'bottom top', // when image bottom hits top of viewport
+              scrub: true,
+            },
+          });
+        }
+      });
+    </script>
   </body>
 </html>
