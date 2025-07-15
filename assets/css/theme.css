@@ -100,7 +100,11 @@ html, body {
 body {
 	position: relative;
 	margin: 0;
-	background-color: var(--tt-main-bg-color);
+	background:
+		url('/assets/img/patterns/flowers.png') repeat,
+		linear-gradient(135deg, #fff8f3 0%, #ffe3e3 100%);
+	background-size: 300px 300px, cover;
+	min-height: 100vh;
 	line-height: 1.6;
 	font-size: 19px;
 	font-weight: normal;
@@ -727,7 +731,7 @@ body.tt-magic-cursor #magic-cursor {
 	font-weight: bold;
 	font-weight: 700;
 	-webkit-text-stroke-width: 1px;
-	-webkit-text-stroke-color: #FFF;
+	-webkit-text-stroke-color: #000000;
 	-webkit-text-fill-color: transparent;
 }
 
@@ -2399,7 +2403,7 @@ a.ph-category:hover {
 	font-weight: bold;
 	font-weight: 700;
 	-webkit-text-stroke-width: 2px;
-	-webkit-text-stroke-color: #FFF;
+	-webkit-text-stroke-color: #000000;
 	-webkit-text-fill-color: transparent;
 }
 @media (max-width: 1024px) {
@@ -4434,7 +4438,7 @@ video.pi-item-video {
 		font-weight: bold;
 		font-weight: 700;
 		-webkit-text-stroke-width: 2px;
-		-webkit-text-stroke-color: #EEE;
+		-webkit-text-stroke-color: #000000;
 		-webkit-text-fill-color: transparent;
 	}
 	body.is-firefox .portfolio-interactive.pi-stroke .pi-item-title {
@@ -5082,7 +5086,7 @@ body:not(.tt-magic-cursor) .tt-ps-caption-title a:hover {
 	font-weight: bold;
 	font-weight: 700;
 	-webkit-text-stroke-width: 2px;
-	-webkit-text-stroke-color: #FFF;
+	-webkit-text-stroke-color: #000000;
 	-webkit-text-fill-color: transparent;
 }
 @media (max-width: 1200px) {
@@ -5529,7 +5533,7 @@ video.tt-pci-video {
 @media (min-width: 1025px) {
 	.pci-caption-stroke .tt-pci-caption-back .tt-pci-title {
 		-webkit-text-stroke-width: 1px;
-		-webkit-text-stroke-color: #FFF;
+		-webkit-text-stroke-color: #000000;
 		-webkit-text-fill-color: transparent;
 	}
 	.pci-caption-stroke .tt-pci-title {
@@ -6357,7 +6361,7 @@ body.tt-portfolio-hover-carousel-on.tt-light-bg-on  #ball .ball-drag::after {
 .tt-pn-subtitle {
 	margin-top: 5px;
 	font-size: calc(19px + 0.1vw);
-	color: #FFF;
+	color: #000000;
 }
 
 
@@ -6370,7 +6374,7 @@ body.tt-portfolio-hover-carousel-on.tt-light-bg-on  #ball .ball-drag::after {
 		font-weight: 700;
 		opacity: .8;
 		-webkit-text-stroke-width: 3px;
-		-webkit-text-stroke-color: #FFF;
+		-webkit-text-stroke-color: #000000;
 		-webkit-text-fill-color: transparent;
 	}
 
@@ -6552,7 +6556,7 @@ body:not(.tt-np-image-on) .tt-np-ghost {
 	font-weight: bold;
 	font-weight: 700;
 	-webkit-text-stroke-width: 2px;
-	-webkit-text-stroke-color: #FFF;
+	-webkit-text-stroke-color: #000000;
 	-webkit-text-fill-color: transparent;
 }
 @media (max-width: 1024px) {
@@ -7962,10 +7966,6 @@ input[type=range] {
 	border-radius: 100%;
 }
 
-.tt-form-check input:disabled,
-.tt-form-radio input:disabled {
-	cursor: not-allowed;
-}
 .tt-form-check input:disabled ~ label,
 .tt-form-radio input:disabled ~ label {
 	cursor: not-allowed;
@@ -8256,7 +8256,7 @@ video.tt-bg-video {
 	font-weight: 700;
 	color: transparent;
 	-webkit-text-stroke-width: 2px;
-	-webkit-text-stroke-color: #CCC;
+	-webkit-text-stroke-color: #000000;
 	-webkit-text-fill-color: transparent;
 }
 
