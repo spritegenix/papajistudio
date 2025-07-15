@@ -30,7 +30,7 @@
       type="text/css"
       media="all"
     />
-     <link
+    <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
       rel="stylesheet"
     />
@@ -58,6 +58,12 @@
       type="text/css"
       media="all"
     />
+    <link
+      rel="stylesheet"
+      href="assets/css/custom.css"
+      type="text/css"
+      media="all"
+    />
     <!-- favicons -->
     <link rel="icon" href="images/icons/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" href="images/icons/favicon-192x192.png" sizes="192x192" />
@@ -75,7 +81,7 @@
           <span class="icon-bar1"></span> <span class="icon-bar2"></span>
         </div>
         <ul class="menu-mobile">
-          <li class="menu-item ">
+          <li class="menu-item">
             <a href="index.html">Home</a>
           </li>
           <li class="menu-item"><a href="about.html">About Us</a></li>
@@ -309,7 +315,9 @@
           <!-- <li class="menu-item">
             <a href="portfolio-grid-portrait-mode.html">Portfolio</a>
           </li> -->
-          <li class="menu-item current-menu-item"><a href="contact-us.html">Contact Us</a></li>
+          <li class="menu-item current-menu-item">
+            <a href="contact-us.html">Contact Us</a>
+          </li>
           <!-- <li class="menu-item">
             <a href="contact.html">Contact</a>
             <ul class="sub-menu">
@@ -369,7 +377,7 @@
           </div>
           <nav class="nav-holder nav-holder-1">
             <ul class="menu-nav">
-              <li class="menu-item menu-item-has-children ">
+              <li class="menu-item menu-item-has-children">
                 <a href="index.html">Home</a>
                 <!-- <ul class="sub-menu">
 										<li class="menu-item"><a href="index.html">Home 1</a></li>
@@ -664,7 +672,7 @@
                 ><i class="fab fa-facebook-f"></i
               ></a>
             </li>
-          <li>
+            <li>
               <a class="social-x" href="#" target="_blank">
                 <i class="fa-brands fa-x-twitter"></i>
               </a>
@@ -712,28 +720,117 @@
                 >
                   <div class="row margin-b24">
                     <div class="col-md-4 margin-bm24">
-                      <input
-                        type="text"
-                        name="name"
-                        class="comm-field"
-                        placeholder="Name"
-                      />
+                      <div class="input-icon-group">
+                        <span class="input-icon"
+                          ><i class="fas fa-user"></i
+                        ></span>
+                        <input
+                          type="text"
+                          name="name"
+                          class="comm-field"
+                          placeholder="Name"
+                        />
+                      </div>
                     </div>
                     <div class="col-md-4 margin-bm24">
-                      <input
-                        type="text"
-                        name="email"
-                        class="comm-field"
-                        placeholder="Email"
-                      />
+                      <div class="input-icon-group">
+                        <span class="input-icon"
+                          ><i class="fas fa-envelope"></i
+                        ></span>
+                        <input
+                          type="text"
+                          name="email"
+                          class="comm-field"
+                          placeholder="Email"
+                        />
+                      </div>
                     </div>
                     <div class="col-md-4">
-                      <input
-                        type="text"
-                        name="subject"
-                        class="comm-field"
-                        placeholder="Subject"
-                      />
+                      <div class="input-icon-group">
+                        <span class="input-icon"
+                          ><i class="fas fa-tag"></i
+                        ></span>
+                        <input
+                          type="text"
+                          name="subject"
+                          class="comm-field"
+                          placeholder="Subject"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row margin-b24">
+                    <div class="col-md-4 margin-bm24">
+                      <div class="input-icon-group">
+                        <span class="input-icon"
+                          ><i class="fas fa-map-marker-alt"></i
+                        ></span>
+                        <input
+                          type="text"
+                          name="venue"
+                          class="comm-field"
+                          placeholder="Wedding Venue / City"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-4 margin-bm24">
+                      <div class="input-icon-group">
+                        <span class="input-icon"
+                          ><i class="fas fa-calendar-alt"></i
+                        ></span>
+                        <input
+                          type="date"
+                          name="date"
+                          class="comm-field"
+                          placeholder="Wedding Date"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="input-icon-group">
+                        <span class="input-icon"
+                          ><i class="fas fa-users"></i
+                        ></span>
+                        <input
+                          type="number"
+                          name="guests"
+                          class="comm-field"
+                          placeholder="No. of Guests"
+                          min="1"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row margin-b24">
+                    <div class="col-md-6 margin-bm24">
+                      <div class="input-icon-group">
+                        <span class="input-icon"
+                          ><i class="fas fa-heart"></i
+                        ></span>
+                        <select name="event_type" class="comm-field">
+                          <option value="" disabled selected>
+                            Type of Event
+                          </option>
+                          <option value="wedding">Wedding</option>
+                          <option value="engagement">Engagement</option>
+                          <option value="prewedding">Pre-Wedding</option>
+                          <option value="reception">Reception</option>
+                          <option value="other">Other</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="input-icon-group">
+                        <span class="input-icon"
+                          ><i class="fas fa-rupee-sign"></i
+                        ></span>
+                        <input
+                          type="text"
+                          name="budget"
+                          class="comm-field"
+                          placeholder="Estimated Budget (INR)"
+                        />
+                      </div>
                     </div>
                   </div>
                   <p>

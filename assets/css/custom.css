@@ -1,0 +1,113 @@
+/* Wedding Invitation Style Enhancements */
+#contact-form-holder {
+  background: linear-gradient(135deg, #fff8f3 0%, #fffbe9 100%);
+  border: 3px solid #e4ba5c;
+  border-radius: 32px;
+  box-shadow: 0 8px 32px rgba(139,44,13,0.08), 0 1.5px 0 #e4ba5c inset;
+  padding: 48px 32px 32px 32px;
+  margin-bottom: 32px;
+  position: relative;
+  overflow: visible;
+}
+#contact-form-holder::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -48px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 48px;
+  background: url('../img/patterns/floral-bg.svg') no-repeat center/contain;
+  opacity: 0.7;
+  pointer-events: none;
+}
+#contact-form {
+  font-family: 'Playfair Display', serif;
+}
+#contact-form .input-icon-group {
+  position: relative;
+  margin-bottom: 36px;
+}
+#contact-form .input-icon {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #e4ba5c;
+  font-size: 1.2em;
+  pointer-events: none;
+  z-index: 2;
+  transition: color 0.2s;
+}
+#contact-form .comm-field,
+#contact-form textarea,
+#contact-form select {
+  width: 100%;
+  border: none;
+  border-bottom: 2.5px solid #e4ba5c;
+  background: transparent;
+  color: #8a210a;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.12rem;
+  padding: 12px 0 10px 36px;
+  border-radius: 0;
+  box-shadow: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+#contact-form .comm-field:focus,
+#contact-form textarea:focus,
+#contact-form select:focus {
+  border-color: #b12c0d;
+  box-shadow: 0 2px 0 #b12c0d;
+  outline: none;
+}
+#contact-form .comm-field:focus ~ .input-icon,
+#contact-form textarea:focus ~ .input-icon,
+#contact-form select:focus ~ .input-icon {
+  color: #b12c0d;
+}
+#contact-form .comm-field::placeholder,
+#contact-form textarea::placeholder {
+  color: #bfa77a;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  opacity: 1;
+}
+#contact-form input[type="submit"] {
+  background: linear-gradient(90deg, #e4ba5c 0%, #b12c0d 100%);
+  color: #fff;
+  border: none;
+  border-radius: 99em;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  padding: 16px 44px;
+  box-shadow: 0 2px 8px rgba(139, 44, 13, 0.10);
+  letter-spacing: 1px;
+  margin-top: 12px;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+#contact-form input[type="submit"]:hover {
+  background: linear-gradient(90deg, #b12c0d 0%, #e4ba5c 100%);
+  color: #fffbe9;
+  box-shadow: 0 4px 16px rgba(139, 44, 13, 0.15);
+}
+#contact-form select {
+  background: transparent;
+  color: #8a210a;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 24px;
+}
+#contact-form textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+@media (max-width: 767px) {
+  #contact-form-holder {
+    padding: 32px 8px 24px 8px;
+    border-radius: 18px;
+  }
+} 
