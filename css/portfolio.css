@@ -1,0 +1,117 @@
+/* Custom styles for portfolio.html */
+#page-content {
+  /* background-image: url('../assets/img/patterns/floral-bg.svg'); */
+  background-repeat: repeat
+  ;
+  /* background: linear-gradient(120deg, #fff8fc 0%, #f7faff 100%); */
+  position: relative;
+  z-index: 0;
+}
+/* #page-content::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; width: 100%; height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.32;
+  filter: blur(2.5px);
+  background: url('data:image/svg+xml;utf8,<svg width="900" height="600" viewBox="0 0 900 600" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M120 160c0-36 30-66 66-66 22 0 41 14 52 34 11-20 30-34 52-34 36 0 66 30 66 66 0 60-118 118-118 118S120 220 120 160z" fill="%23f9e6ff"/><g><circle cx="700" cy="180" r="36" fill="%23eec9f5"/><circle cx="700" cy="180" r="16" fill="%23fff6fa"/><circle cx="664" cy="180" r="16" fill="%23ffe3f0"/><circle cx="736" cy="180" r="16" fill="%23ffe3f0"/><circle cx="700" cy="144" r="16" fill="%23ffe3f0"/><circle cx="700" cy="216" r="16" fill="%23ffe3f0"/></g><path d="M500 520c0-32 26-58 58-58s58 26 58 58c0 32-58 70-58 70s-58-38-58-70z" fill="%23ffe3f0"/><path d="M820 540c0-16 14-30 30-30s30 14 30 30c0 16-30 34-30 34s-30-18-30-34z" fill="%23f7d6e0"/><path d="M160 520c0-20 16-36 36-36s36 16 36 36c0 20-36 44-36 44s-36-24-36-44z" fill="%23fff6fa"/></svg>') left top repeat;
+  background-size: 900px 600px;
+} */
+.tt-section-inner, .tt-wrap {
+  position: relative;
+  z-index: 2;
+}
+.portfolio-grid-item {
+  background: white !important;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.10), 0 1.5px 6px 0 rgba(0,0,0,0.04);
+  border-radius: 18px;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+  position: relative;
+  animation: fadeInUp 1s cubic-bezier(.4,2,.6,1);
+  /* padding: 18px 18px 24px 18px; */
+  padding: 10px;
+  z-index: 10;
+}
+.portfolio-grid-item:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 16px 48px 0 rgba(31, 38, 135, 0.18), 0 3px 12px 0 rgba(0,0,0,0.08);
+  z-index: 12;
+}
+.pgi-image-inner {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+}
+.pgi-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #c59fc9;
+  text-shadow: 0 2px 8px rgba(255,255,255,0.18);
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0.5em;
+}
+.pgi-title::after {
+  content: '';
+  display: block;
+  width: 60%;
+  height: 12px;
+  margin: 0.2em auto 0 auto;
+  background: url('data:image/svg+xml;utf8,<svg width="100%25" height="100%25" viewBox="0 0 120 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 6 Q30 12 60 6 T110 6" stroke="%23eec9f5" stroke-width="2.5" fill="none"/><ellipse cx="60" cy="6" rx="4" ry="2.5" fill="%23f9e6ff"/></svg>') center/contain no-repeat;
+  opacity: 0.7;
+}
+.pgi-categories-wrap {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.pgi-category {
+  font-family: 'Syne', sans-serif;
+  font-size: 1rem;
+  color: #b48eae;
+  background: rgba(255,255,255,0.7);
+  padding: 2px 12px 2px 28px;
+  border-radius: 12px;
+  display: inline-block;
+  margin-top: 6px;
+  position: relative;
+  min-width: 60px;
+}
+.pgi-category::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background: url('data:image/svg+xml;utf8,<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="6" cy="6" r="6" fill="%23eec9f5"/><circle cx="6" cy="6" r="3" fill="%23fff6fa"/></svg>') center/cover no-repeat;
+  opacity: 0.8;
+}
+.pgi-svg-overlay {
+  position: absolute;
+  left: 0; top: 0; width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.18;
+}
+.z-100 {
+  z-index: 100 !important;
+  position: relative;
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: none; }
+}
+@media (max-width: 600px) {
+  .portfolio-grid-item { border-radius: 10px; padding: 10px 10px 16px 10px; }
+  .pgi-image-inner { border-radius: 10px; }
+  .pgi-title::after { height: 8px; }
+  .pgi-category { padding-left: 22px; min-width: 40px; }
+  .pgi-category::before { width: 8px; height: 8px; left: 6px; }
+} 

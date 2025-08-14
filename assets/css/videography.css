@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+.videography-bg {
+ background: url('/assets/img/patterns/flowers.png') repeat,
+    linear-gradient(135deg, #fff8f3 0%, #ffe3e3 100%);
+  background-attachment: fixed;
+  padding: 80px 0;
+  position: relative;
+   background-size: 300px 300px, cover;
+  min-height: 100vh;
+}
+
+.videography-bg::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(255, 255, 255, 0.405);
+  z-index: 0;
+}
+
+.tt-section-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.section-title {
+  font-family: "Playfair Display", sans-serif;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  /* gap: 40px; */
+}
+
+.video-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.video-grid {
+  display: grid;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+.thumbnail {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.play-button {
+  width: 70px;
+  height: 70px;
+  background: rgba(255, 0, 0, 0.9);
+  border-radius: 50%;
+  color: white;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
+}
+
+.play-button:hover {
+  transform: scale(1.1);
+}
+
+
+.video-caption {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 1rem;
+  color: #444;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* .video-wrapper {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  background-color: #000;
+} */
+.video-wrapper {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  /* background-color: #000; */
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.thumbnail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}

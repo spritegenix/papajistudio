@@ -2178,20 +2178,20 @@
   // ============================================================================
 
   // init Isotope
-  var $container = $('.isotope-items-wrap');
-  $container.imagesLoaded(function () {
-    $container.isotope({
-      itemSelector: '.isotope-item',
-      layoutMode: 'packery',
-      transitionDuration: '0.7s',
-      percentPosition: true,
-    });
+  // var $container = $('.isotope-items-wrap');
+  // $container.imagesLoaded(function () {
+  //   $container.isotope({
+  //     itemSelector: '.isotope-item',
+  //     layoutMode: 'packery',
+  //     transitionDuration: '0.7s',
+  //     percentPosition: true,
+  //   });
 
-    setTimeout(function () {
-      $container.isotope('layout'); // Refresh Isotope
-      ScrollTrigger.refresh(true); // Refresh ScrollTrigger
-    }, 500);
-  });
+  //   setTimeout(function () {
+  //     $container.isotope('layout'); // Refresh Isotope
+  //     ScrollTrigger.refresh(true); // Refresh ScrollTrigger
+  //   }, 500);
+  // });
 
   // Filter
   $('.ttgr-cat-list > li > a, .ttgr-cat-classic-list > li > a').on(
