@@ -47,20 +47,21 @@ https://matchthemes.com
 	--body-line-height: 1.7;
 	--headings-font: "Playfair Display", serif;
 	/* --headings-font: Cormorant, serif; */
-	--headings-color: #000000; 
+	--headings-color: #4E3B1F; 
 	/* --primary-color: #8bb8c1; */
-	--primary-color: #ffffff;
+	--primary-color: #d4a574;
 	--extra-color1: #acdae2;
 	--white-color: #ffffff;
 	--menu-normal-color: #ffffff;
-	--menu-hover-color: #ffffff;
+	--menu-hover-color: #d4a574;
 	--submenu-background-color: #ffffff;
 	--submenu-normal-color: #0e1219;	
 	--submenu-hover-color: #8bb8c1;
 	--footer-background-color: #000000;
 	--footer-color: #	--body-background: #000000;   
 ;
---yellow-color: #fdf6e3;
+/* --yellow-color: #4E3B1F; */
+--yellow-color: #F5F0EC;
 --brown-color:#d4a574;
 	--footer-title-color: #ffffff;
 	--headings-h1-size: 3.5rem;
@@ -348,7 +349,7 @@ body {
 	-webkit-text-size-adjust: 100%;
 	-webkit-overflow-scrolling: touch;
 	text-rendering: optimizeLegibility;
-	background: var(--body-background);
+	background: var(--yellow-color);
 	color: var(--body-color);
 	font-family: var(--body-font);
 	font-size: var(--body-font-size);
@@ -445,7 +446,7 @@ p a {
 
 a:hover,
 p a:hover {
-	color: var(--primary-color);
+	color: var(--brown-color);
 	text-decoration: none;
 }
 
@@ -1793,7 +1794,7 @@ aside p {
 	display: inline-block;
 	font-size: 12px;
 	font-weight: 600;
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 	margin: 4px 8px 0 0;
 	letter-spacing: 0.03em;
 	color: #fff;
@@ -3518,17 +3519,17 @@ aside table td,
 
 footer {
 	padding: 0 0 54px 0;
-	background: var(--footer-background-color);
+	background: var(--headings-color);
 }
 
-.footer-widgets{
+/* .footer-widgets{
 	padding-top: 108px;
-}
+} */
 
 footer,
 footer a,
 .footer-social li a {
-	color: var(--footer-color);
+	color: var(--white-color);
 }
 
 .foo-block,
@@ -3548,7 +3549,7 @@ footer a,
 	font-size: 14px;
 	text-align: center;
 	letter-spacing: 0.05em;
-	color: #858585;
+	color: var(--white-color);
 }
 
 #footer-instagram {
@@ -5181,7 +5182,18 @@ body.hidden-scroll {
 			  }
 	}
 
-
+.imageblockquote {
+	font-size: 32px;
+	font-style: italic;
+	line-height: 1.6em;
+	color: var(--headings-color);
+	position: relative;
+	letter-spacing: 0.05em;
+	margin: auto;
+	text-align: center;
+	padding-top: 80px;
+	
+}
 	@media (max-width: 768px) {
   .slider-img {
     position: relative;
@@ -5200,5 +5212,22 @@ body.hidden-scroll {
     object-fit: cover;
     /* contain can leave gaps; use cover unless you want full video visibility */
   }
+  .imageblockquote {
+		font-size: 18px;
+		margin: auto;
+		padding-top: 20px;
+		text-align: center;
+		padding-left: 0;
+	}
 }
 
+.p-50{
+	padding: 50px;
+}
+
+
+.contact-couple img{
+	display: flex;
+	justify-content: center;
+	margin: auto;
+}

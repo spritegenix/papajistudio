@@ -1,4 +1,7 @@
 /* Wedding Invitation Style Enhancements */
+/* new color format #4E3B1F */
+
+
 #contact-form-holder {
   background: linear-gradient(135deg, #fff8f3 0%, #fffbe9 100%);
   border: 3px solid #e4ba5c;
@@ -111,4 +114,5 @@
     border-radius: 18px;
   }
 } 
+
 

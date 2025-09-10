@@ -74,10 +74,13 @@
 /* ------------------------------------------------------------- *
  * Global variables
 /* ------------------------------------------------------------- */
-
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 :root {
   --tt-main-bg-color: #0a0a0a; /* Template background color. */
   --tt-main-color: #b12c0d; /* Template main color. */
+  --yellow-color: #F5F0EC;
+--heading-color: #4E3B1F; 
+--para-font:  "Lora", serif;
 }
 
 /* ------------------------------------------------------------- *
@@ -97,8 +100,9 @@ body {
 body {
   position: relative;
   margin: 0;
-  background: url('/assets/img/patterns/flowers.png') repeat,
-    linear-gradient(135deg, #fff8f3 0%, #ffe3e3 100%);
+  background-color: var(--yellow-color);
+  /* background: url('/assets/img/patterns/flowers.png') repeat,
+    linear-gradient(135deg, #fff8f3 0%, #ffe3e3 100%); */
   background-size: 300px 300px, cover;
   min-height: 100vh;
   line-height: 1.6;
@@ -111,12 +115,15 @@ body {
 
 p {
   margin: 0 0 30px;
+  font-family: var(--para-font);
 }
 
 a {
   color: currentColor;
   text-decoration: none;
   outline: none;
+  font-family: var(--para-font);
+
 }
 a:hover,
 a:focus {
@@ -594,17 +601,17 @@ body.tt-magic-cursor #magic-cursor {
 }
 @media (max-width: 991px) {
   .tt-section {
-    padding: 10% 0;
+    padding: 5% 0;
   }
 }
 @media (max-width: 767px) {
   .tt-section {
-    padding: 10% 0;
+    padding: 5% 0;
   }
 }
 @media (max-width: 480px) {
   .tt-section {
-    padding: 15% 0;
+    padding: 5% 0;
   }
 }
 
@@ -2328,7 +2335,7 @@ a.ph-category:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #111;
+  background-color: #fff;
   animation: scroll-down-swipe-line 4s infinite;
 }
 @keyframes scroll-down-swipe-line {
@@ -2356,7 +2363,7 @@ a.ph-category:hover {
   content: '';
   left: 0;
   width: 12px;
-  background-color: #111;
+  background-color: #fff;
   transition: width 0.3s;
 }
 .tt-sd-arrow::before {
@@ -3778,7 +3785,7 @@ video.pgi-video {
   font-size: clamp(28px, 4vw, 64px);
   font-weight: bold;
   font-weight: 600;
-  color: #111;
+  color: var(--heading-color);
   line-height: 1.5;
 }
 @media (max-width: 767px) {
@@ -10747,3 +10754,23 @@ body:not(.is-mobile) .tt-style-switch:hover {
   background: #000;
 }
 
+.see-more-button {
+  background-color: #F5F0EC; /* Body Background */
+  border: 1px solid #d4a574; /* Primary Color */
+  color: #4E3B1F; /* Headings Color */
+  font-family: "Playfair Display", serif;
+  font-size: 16px;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-weight: 600;
+ 
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+.see-more-button:hover {
+  background-color: #d4a574; /* Primary Color */
+  color: #F5F0EC; /* Body Background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
