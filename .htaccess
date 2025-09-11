@@ -18,6 +18,7 @@
     RewriteRule ^(.*)/?$ /$1.html [L]
     RewriteRule ^photography/?$ photography.html [L]
     RewriteRule ^films/?$ films.html [L]
+     RewriteRule ^blog/?$ blog.html [L]
     # Fallback to index.html for non-existent routes (Next.js export SPA behavior)
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
