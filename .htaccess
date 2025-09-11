@@ -11,6 +11,11 @@
         Require all granted
     </FilesMatch>
 
+    # Allow access to images directory
+    <Directory ~ "/images">
+        Require all granted
+    </Directory>
+
     # Explicitly allow access to photography.html
     <FilesMatch "photography.html$">
         Require all granted
@@ -23,7 +28,7 @@
     RewriteRule ^(.*)/?$ /$1.html [L]
     RewriteRule ^photography/?$ photography.html [L]
     RewriteRule ^films/?$ /films.html [L]
-    RewriteRule ^blog?$ blog.html [L]
+    RewriteRule ^blog/?$ blog.html [L]
     # Fallback to index.html for non-existent routes (Next.js export SPA behavior)
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
