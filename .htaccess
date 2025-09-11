@@ -11,19 +11,24 @@
         Require all granted
     </FilesMatch>
 
+    # Explicitly allow access to photography.html
+    <FilesMatch "photography.html$">
+        Require all granted
+    </FilesMatch>
+
     # Serve static HTML files correctly
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_URI} !^/index\.html$
     RewriteRule ^(.*)/?$ /$1.html [L]
     RewriteRule ^photography/?$ photography.html [L]
-    RewriteRule ^films/?$ films.html [L]
-     RewriteRule ^blog/?$ blog.html [L]
+    RewriteRule ^films/?$ /films.html [L]
+    RewriteRule ^blog/?$ blog.html [L]
     # Fallback to index.html for non-existent routes (Next.js export SPA behavior)
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^.*$ /index.html [QSA,L]
-  
+
 
     # Security Headers
    <IfModule mod_headers.c>
