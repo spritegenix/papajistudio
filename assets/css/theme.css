@@ -74,13 +74,13 @@
 /* ------------------------------------------------------------- *
  * Global variables
 /* ------------------------------------------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap'); */
 :root {
   --tt-main-bg-color: #0a0a0a; /* Template background color. */
   --tt-main-color: #b12c0d; /* Template main color. */
   --yellow-color: #F5F0EC;
 --heading-color: #4E3B1F; 
---para-font:  "Lora", serif;
+--para-font:  var(--font-lora), serif;
 }
 
 /* ------------------------------------------------------------- *
@@ -224,10 +224,10 @@ hr {
 
 /* Body font
 ============= */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap'); */
 body {
 
-  font-family: "Playfair Display", sans-serif;
+  font-family: var(--font-playfair), sans-serif;
 }
 
 /* Secondary font
@@ -10758,7 +10758,7 @@ body:not(.is-mobile) .tt-style-switch:hover {
   background-color: #F5F0EC; /* Body Background */
   border: 1px solid #d4a574; /* Primary Color */
   color: #4E3B1F; /* Headings Color */
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-playfair), serif;
   font-size: 16px;
   padding: 12px 24px;
   border-radius: 4px;

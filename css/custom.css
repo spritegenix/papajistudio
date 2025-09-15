@@ -38,19 +38,15 @@ https://matchthemes.com
 *
 * 
 */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 
-@import url('https://fonts.googleapis.com/css2?family=Bilbo&family=Luxurious+Roman&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
-
-@import url('https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Merienda:wght@300..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap'); */
 
 :root {  
 	/* font-family: "Bilbo", cursive; */
 	/* --body-font:  "Merienda", cursive; */
-	--body-font: "Playfair Display", sans-serif;
+	--body-font:  var(--font-playfair), sans-serif;
 
 	/* --body-font: Open Sans, sans-serif; */
 	--body-color: #858585;
@@ -58,8 +54,8 @@ https://matchthemes.com
 	--body-font-size: 16px;   
 	--body-line-height: 1.7;
 	/* --headings-font: "Merienda", cursive; */
-	--headings-font: "Playfair Display", sans-serif;
-	--para-font:  "Lora", serif;
+	--headings-font:  var(--font-playfair), sans-serif;
+	--para-font:  var(--font-lora), serif;
 	/* --headings-font: Cormorant, serif; */
 	--headings-color: #4E3B1F; 
 	/* --primary-color: #8bb8c1; */
