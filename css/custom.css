@@ -3493,7 +3493,7 @@ aside .display-post-date {
 .widget_recent_comments li,
 .widget_rss li,
 .widget_nav_menu li {
-	margin-bottom: 16px;
+	margin-bottom: 8px;
 	line-height: 1.4;
 }
 
