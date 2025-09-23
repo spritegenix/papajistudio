@@ -3020,7 +3020,7 @@
     tl_FadeInUp.from(
       this,
       {
-        duration: 2.5,
+        duration: 0.3,
         autoAlpha: 0,
         y: 100,
         ease: Expo.easeOut,
