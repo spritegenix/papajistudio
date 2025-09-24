@@ -1921,6 +1921,9 @@ body:not(.tt-boxed) .page-header-inner,
   padding-left: 13%;
   padding-right: 13%;
 }
+.background-films {
+  background-position: center;
+}
 @media (max-width: 1920px) {
   .page-header-inner {
     padding-top: 250px;
@@ -1960,7 +1963,7 @@ body:not(.tt-boxed) .page-header-inner,
   body:not(.ph-image-on) #page-header .page-header-inner,
   body.ph-image-on.ph-bg-image-on #page-header .page-header-inner {
     padding-top: 200px;
-    padding-bottom: 140px;
+    padding-bottom: 240px;
   }
 }
 @media (max-width: 540px) {
@@ -1968,6 +1971,15 @@ body:not(.tt-boxed) .page-header-inner,
     padding-top: 250px;
     padding-bottom: 250px;
   }
+  .ph-caption-title-ghost{
+transform: translateY(-20px);
+top: -44px;
+  }
+
+  .background-films{
+    background-position: 20% 30%;
+  }
+  
 }
 
 /* Page header image 
