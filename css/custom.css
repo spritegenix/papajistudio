@@ -4798,10 +4798,10 @@ body.hidden-scroll {
 	.single-post-title{
 		font-size: calc(1.5rem + 1.5vw);
 	}
-	.top-single-bkg .inner-desc{
+
+		.top-single-bkg .inner-desc.about-desc{
 top:30%
 	}
-		
 	.title-404{
 	font-size: 81px;
 	}
