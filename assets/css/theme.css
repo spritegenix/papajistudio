@@ -1971,10 +1971,10 @@ body:not(.tt-boxed) .page-header-inner,
     padding-top: 250px;
     padding-bottom: 250px;
   }
-  .ph-caption-title-ghost{
+  /* .ph-caption-title-ghost{
 transform: translateY(-20px);
 top: -44px;
-  }
+  } */
 
   .background-films{
     background-position: 20% 30%;
@@ -10757,6 +10757,13 @@ body:not(.is-mobile) .tt-style-switch:hover {
   .responsive-video-wrapper {
     aspect-ratio: 9 / 16; /* Mobile portrait */
   }
+  .ph-caption {
+  transform: translate(0, 70px);
+}
+.ph-caption-title-ghost .phgh-text{
+  transform: translate(0, 55px);
+
+}
 }
 .responsive-video-wrapper video {
   width: 100%;

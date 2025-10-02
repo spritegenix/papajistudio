@@ -3,7 +3,7 @@
     RewriteBase /
 
     # Redirect www to non-www (301 permanent)
-    RewriteCond %{HTTP_HOST} ^www\.vinitawomenshospital\.in$ [NC]
+    RewriteCond %{HTTP_HOST} ^www\.papajiphotography.com\.in$ [NC]
     RewriteRule ^(.*)$ https://papajiphotography.com/$1 [R=301,L]
 
     # Allow access to static files (HTML, CSS, JS, Images, Fonts)

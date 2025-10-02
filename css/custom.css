@@ -4784,14 +4784,22 @@ body.hidden-scroll {
 	.topsingleimage{
 		height: 300px;
 	}
-	
+	.top-single-bkg .inner-desc.blog-desc{
+	top: 70%;
+}
 	/* end menu */
 	
 	/* home */
 	
 	.slider-item-box-bkg,
 	.top-single-bkg	{
-		height: 400px;
+		height: 500px;
+	}
+	.single-post-title{
+		font-size: calc(1.5rem + 1.5vw);
+	}
+	.top-single-bkg .inner-desc{
+top:30%
 	}
 		
 	.title-404{
