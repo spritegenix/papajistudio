@@ -1705,6 +1705,9 @@ font-weight: 600;
 	-o-transform: translateY(-50%);
 	transform: translateY(-50%);
 }
+.inner-desc.blog-desc{
+	top: 30%;
+}
 
 .single-post-title {
 	color: #fff;
